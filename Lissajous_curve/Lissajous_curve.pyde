@@ -1,3 +1,4 @@
+add_library('dashedlines')
 w, angle = 100, 0
 
 class Curve():
@@ -18,8 +19,9 @@ class Curve():
     def reset(self):
         self.path = []
         
-    def show(self):
-        stroke(255)
+    def show(self, colors, i, j):
+        print(mix_color(colors[i], colors[j]))
+        stroke(*mix_color(colors[i], colors[j]))
         strokeWeight(2)
         noFill()
         beginShape()
@@ -28,20 +30,26 @@ class Curve():
         endShape()
         strokeWeight(8)
         point(self.current.x, self.current.y)
-        self.current = PVector ()  
+        self.current = PVector()  
+
+def mix_color(c1, c2):
+    return [((c1[idx] + c2[idx]) / 2) for idx in range(3)]
 
 def setup():
     frameRate(30)
     size(800, 800)
-    global cols, rows, curves, colors
+    global cols, rows, curves, colors, dash
     cols = width / w - 1 
     rows = height / w - 1
+    dash = DashedLines(this)
+    dash.pattern(5, 5, 5, 5)
     curves = [[Curve() for i in range(rows)] for j in range(cols)]
-    colors = [color(random(255), random(255), random(255)) for i in range(cols)]
+    colors = [(random(255), random(255), random(255)) for i in range(cols)]
+    
 
 def draw():
     global angle, test, w
-    background(0)
+    background(20)
     d = w - 0.2 * w
     r = d / 2
     noFill()
@@ -50,16 +58,16 @@ def draw():
         cx = w + i * w + w / 2
         cy = w / 2
         strokeWeight(2)
-        stroke(colors[i])
+        stroke(*colors[i])
         ellipse(cx, cy, d, d)
         x = r * cos(angle * (i + 1) - HALF_PI)
         y = r * sin(angle * (i + 1) - HALF_PI)
         strokeWeight(8)
         stroke(255)
         point(cx + x, cy + y)
-        stroke(colors[i])
+        stroke(*colors[i])
         strokeWeight(1)
-        line(cx + x, 0, cx + x, height)
+        dash.line(cx + x, cy + y, cx + x, height)
         for j in range(rows): 
             curves[j][i].setX(cx + x)
     noFill()
@@ -68,33 +76,32 @@ def draw():
         cx = w / 2
         cy = w + j * w + w / 2
         strokeWeight(2)
-        stroke(colors[j])
+        stroke(*colors[j])
         ellipse(cx, cy, d, d)
         x = r * cos(angle * (j + 1) - HALF_PI)
         y = r * sin(angle * (j + 1) - HALF_PI)
         strokeWeight(8)
         stroke(255)
         point(cx + x, cy + y)
-        stroke(colors[j])
+        stroke(*colors[j])
         strokeWeight(1)
-        line(0, cy + y, width, cy + y)
+        dash.line(cx + x, cy + y, width, cy + y)
         for i in range(cols):
             curves[j][i].setY(cy + y)
 
     for j in range(rows):
         for i in range(cols):
             curves[j][i].add_point()
-            curves[j][i].show()
+            curves[j][i].show(colors, i, j)
             
-    angle -= 0.015
-    if (angle < -TWO_PI):
+    angle += 0.015
+    if (angle > TWO_PI):
         for j in range(rows):
             for i in range(cols):
                 curves[j][i].reset()
 
-    
-        angle = 0
-    #saveFrame("lissajous####.png");
+        angle = 0 # reset after 2 tours 2PI
+    #saveFrame("Lissajous_curve####.png");
 
 
 
