@@ -92,9 +92,10 @@ def draw():
             for i in range(cols):
                 curves[j][i].reset()
 
-        #saveFrame("lissajous#####.png");
+    
         angle = 0
-    print(angle)
+    #saveFrame("lissajous####.png");
+
 
 
   
