@@ -1,3 +1,4 @@
+add_library('VideoExport')
 add_library('dashedlines')
 w, angle = 100, 0
 
@@ -36,13 +37,15 @@ def mix_color(c1, c2):
     return [((c1[idx] + c2[idx]) / 2) for idx in range(3)]
 
 def setup():
-    frameRate(30)
+    frameRate(60)
     size(800, 800)
     global cols, rows, curves, colors, dash
     cols = width / w - 1 
     rows = height / w - 1
     dash = DashedLines(this)
     dash.pattern(5, 5, 5, 5)
+    videoExport = VideoExport(this)
+    videoExport.startMovie()
     curves = [[Curve() for i in range(rows)] for j in range(cols)]
     colors = [(random(255), random(255), random(255)) for i in range(cols)]
     
@@ -94,7 +97,7 @@ def draw():
             curves[j][i].add_point()
             curves[j][i].show(colors, i, j)
             
-    angle += 0.015
+    angle += 0.010
     if (angle > TWO_PI):
         for j in range(rows):
             for i in range(cols):
@@ -102,7 +105,11 @@ def draw():
 
         angle = 0 # reset after 2 tours 2PI
     #saveFrame("Lissajous_curve####.png");
-
-
+    videoExport.saveFrame()
+    
+def keyPressed():
+  if (key == 'q'):
+    videoExport.endMovie()
+    exit()
 
   
