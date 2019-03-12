@@ -1,6 +1,6 @@
 add_library('VideoExport')
 add_library('dashedlines')
-w, angle = 100, 0
+w, angle = 120, 0
 
 class Curve():
     
@@ -37,9 +37,9 @@ def mix_color(c1, c2):
     return [((c1[idx] + c2[idx]) / 2) for idx in range(3)]
 
 def setup():
-    frameRate(60)
+    frameRate(144)
     size(800, 800)
-    global cols, rows, curves, colors, dash
+    global cols, rows, curves, colors, dash, videoExport
     cols = width / w - 1 
     rows = height / w - 1
     dash = DashedLines(this)
@@ -97,7 +97,7 @@ def draw():
             curves[j][i].add_point()
             curves[j][i].show(colors, i, j)
             
-    angle += 0.010
+    angle += 0.02
     if (angle > TWO_PI):
         for j in range(rows):
             for i in range(cols):

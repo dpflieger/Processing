@@ -14,9 +14,9 @@ Input #0, rawvideo, from 'pipe:':
     Stream #0:0: Video: rawvideo (RGB[24] / 0x18424752), rgb24, 800x800, 460800 kb/s, 30 tbr, 30 tbn, 30 tbc
 Stream mapping:
   Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
-[libx264 @ 000001612e541480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001612e541480] profile High, level 3.1, 4:2:0, 8-bit
-[libx264 @ 000001612e541480] 264 - core 157 r2935 545de2f - H.264/MPEG-4 AVC codec - Copyleft 2003-2018 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=15.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[libx264 @ 000002203ce91480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002203ce91480] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000002203ce91480] 264 - core 157 r2935 545de2f - H.264/MPEG-4 AVC codec - Copyleft 2003-2018 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=15.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
 Output #0, mp4, to 'C:\Users\david\Documents\GitHub\Processing\Lissajous_curve\processing-movie.mp4':
   Metadata:
     comment         : Made with Video Export for Processing - https://git.io/vAXLk
@@ -26,23 +26,21 @@ Output #0, mp4, to 'C:\Users\david\Documents\GitHub\Processing\Lissajous_curve\p
       encoder         : Lavc58.46.100 libx264
     Side data:
       cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
-frame=   31 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   56 fps= 55 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   79 fps= 52 q=21.0 size=       0kB time=00:00:00.66 bitrate=   0.6kbits/s speed=0.438x    frame=  101 fps= 50 q=21.0 size=       0kB time=00:00:01.40 bitrate=   0.3kbits/s speed=0.69x    frame=  123 fps= 48 q=21.0 size=     256kB time=00:00:02.13 bitrate= 983.2kbits/s speed=0.835x    frame=  144 fps= 47 q=21.0 size=     512kB time=00:00:02.83 bitrate=1480.4kbits/s speed=0.92x    frame=  164 fps= 46 q=21.0 size=     512kB time=00:00:03.50 bitrate=1198.5kbits/s speed=0.976x    frame=  183 fps= 45 q=21.0 size=     768kB time=00:00:04.13 bitrate=1522.2kbits/s speed=1.01x    frame=  202 fps= 44 q=21.0 size=     768kB time=00:00:04.76 bitrate=1319.9kbits/s speed=1.04x    frame=  220 fps= 43 q=21.0 size=    1024kB time=00:00:05.36 bitrate=1563.1kbits/s speed=1.05x    frame=  238 fps= 42 q=21.0 size=    1280kB time=00:00:05.96 bitrate=1757.4kbits/s speed=1.06x    frame=  256 fps= 42 q=21.0 size=    1280kB time=00:00:06.56 bitrate=1596.9kbits/s speed=1.07x    frame=  273 fps= 41 q=21.0 size=    1536kB time=00:00:07.13 bitrate=1764.0kbits/s speed=1.07x    frame=  290 fps= 40 q=21.0 size=    1536kB time=00:00:07.70 bitrate=1634.2kbits/s speed=1.07x    frame=  306 fps= 40 q=21.0 size=    1792kB time=00:00:08.23 bitrate=1783.0kbits/s speed=1.07x    frame=  326 fps= 40 q=21.0 size=    2048kB time=00:00:08.90 bitrate=1885.1kbits/s speed=1.09x    frame=  352 fps= 40 q=21.0 size=    2304kB time=00:00:09.76 bitrate=1932.6kbits/s speed=1.12x    frame=  377 fps= 41 q=21.0 size=    2560kB time=00:00:10.60 bitrate=1978.5kbits/s speed=1.15x    frame=  401 fps= 41 q=21.0 size=    2560kB time=00:00:11.40 bitrate=1839.6kbits/s speed=1.17x    frame=  421 fps= 41 q=21.0 size=    2816kB time=00:00:12.06 bitrate=1911.8kbits/s speed=1.18x    frame=  428 fps= 40 q=-1.0 Lsize=    3340kB time=00:00:14.16 bitrate=1931.6kbits/s speed=1.33x    
-video:3336kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.134514%
-[libx264 @ 000001612e541480] frame I:2     Avg QP: 7.93  size: 71608
-[libx264 @ 000001612e541480] frame P:284   Avg QP:15.90  size:  8477
-[libx264 @ 000001612e541480] frame B:142   Avg QP:22.23  size:  6088
-[libx264 @ 000001612e541480] consecutive B-frames: 51.4% 11.2%  5.6% 31.8%
-[libx264 @ 000001612e541480] mb I  I16..4: 59.7%  1.1% 39.2%
-[libx264 @ 000001612e541480] mb P  I16..4:  2.5%  0.9%  1.0%  P16..4: 13.5%  5.3%  3.2%  0.0%  0.0%    skip:73.6%
-[libx264 @ 000001612e541480] mb B  I16..4:  0.2%  0.5%  0.3%  B16..8: 18.2%  5.6%  1.6%  direct: 1.3%  skip:72.2%  L0:51.3% L1:45.4% BI: 3.3%
-[libx264 @ 000001612e541480] 8x8 transform intra:20.9% inter:5.2%
-[libx264 @ 000001612e541480] coded y,uvDC,uvAC intra: 13.4% 35.8% 32.5% inter: 3.2% 8.4% 7.3%
-[libx264 @ 000001612e541480] i16 v,h,dc,p: 81% 16%  4%  0%
-[libx264 @ 000001612e541480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  4%  2% 94%  0%  0%  0%  0%  0%  0%
-[libx264 @ 000001612e541480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 22% 34%  2%  2%  2%  2%  2%  2%
-[libx264 @ 000001612e541480] i8c dc,h,v,p: 57% 25% 17%  0%
-[libx264 @ 000001612e541480] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 000001612e541480] ref P L0: 60.0%  1.0% 25.5% 13.5%
-[libx264 @ 000001612e541480] ref B L0: 78.1% 17.6%  4.3%
-[libx264 @ 000001612e541480] ref B L1: 94.2%  5.8%
-[libx264 @ 000001612e541480] kb/s:1915.13
+frame=   32 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   58 fps= 57 q=21.0 size=       0kB time=-00:00:00.03 bitrate=N/A speed=N/A    frame=   84 fps= 55 q=21.0 size=       0kB time=00:00:00.83 bitrate=   0.5kbits/s speed=0.546x    frame=  108 fps= 53 q=21.0 size=       0kB time=00:00:01.63 bitrate=   0.2kbits/s speed=0.798x    frame=  131 fps= 51 q=21.0 size=       0kB time=00:00:02.40 bitrate=   0.2kbits/s speed=0.942x    frame=  154 fps= 50 q=21.0 size=       0kB time=00:00:03.16 bitrate=   0.1kbits/s speed=1.04x    frame=  163 fps= 48 q=-1.0 Lsize=      58kB time=00:00:05.33 bitrate=  89.1kbits/s speed=1.58x    
+video:55kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 5.088406%
+[libx264 @ 000002203ce91480] frame I:1     Avg QP: 4.96  size: 50233
+[libx264 @ 000002203ce91480] frame P:41    Avg QP:10.59  size:    45
+[libx264 @ 000002203ce91480] frame B:121   Avg QP: 5.67  size:    31
+[libx264 @ 000002203ce91480] consecutive B-frames:  0.6%  1.2%  0.0% 98.2%
+[libx264 @ 000002203ce91480] mb I  I16..4: 72.3%  0.8% 26.9%
+[libx264 @ 000002203ce91480] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.9%
+[libx264 @ 000002203ce91480] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 0.0% L1:100.0% BI: 0.0%
+[libx264 @ 000002203ce91480] 8x8 transform intra:0.8% inter:0.0%
+[libx264 @ 000002203ce91480] coded y,uvDC,uvAC intra: 14.8% 28.7% 28.0% inter: 0.0% 0.0% 0.0%
+[libx264 @ 000002203ce91480] i16 v,h,dc,p: 91%  6%  3%  0%
+[libx264 @ 000002203ce91480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 55% 15% 30%  0%  0%  0%  0%  0%  0%
+[libx264 @ 000002203ce91480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 48% 21% 16%  3%  2%  2%  2%  4%  3%
+[libx264 @ 000002203ce91480] i8c dc,h,v,p: 78% 10% 11%  1%
+[libx264 @ 000002203ce91480] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002203ce91480] ref P L0: 96.2%  0.0%  3.8%
+[libx264 @ 000002203ce91480] kb/s:82.18
